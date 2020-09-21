@@ -1,0 +1,46 @@
+.book-form {
+  border-bottom: 0px solid rgba(0, 0, 0, 0);
+  display: block;
+  overflow: hidden;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  height: 0;
+}
+
+.book-form > div {
+  display: inline-block;
+  margin: 10px 10px 10px 0;
+}
+
+.book-form > div input:not(#read) {
+  display: block;
+  margin-top: 2px;
+}
+
+.book-form > div input:not(#read):invalid:required {
+  border: 1px solid red;
+}
+
+.book-form div:last-of-type {
+  display: block;
+}
+
+.book-form button {
+  display: block;
+  background-color: #bcf0bc;
+  width: 80px;
+  height: 30px;
+  margin-left: 1px;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  -webkit-box-shadow: 1px 1px 2px #70a570;
+          box-shadow: 1px 1px 2px #70a570;
+}
+
+#new-book {
+  display: block;
+  /*margin: 20px 0;*/
+  margin-top: 20px;
+}

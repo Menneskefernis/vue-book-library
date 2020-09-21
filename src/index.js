@@ -1,3 +1,5 @@
+import './reset.css'
+import './global.css'
 import Vue from 'vue'
 import AppComponent from './App/index.vue'
 

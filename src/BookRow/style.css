@@ -1,0 +1,39 @@
+h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+i {
+  font-style: italic;
+}
+
+#library #book-list article {
+  margin-top: 20px;
+  display: block;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #bcf0bc;
+}
+
+#library #book-list article div.book-info {
+  display: inline-block;
+}
+
+#library #book-list article div.book-settings {
+  float: right;
+}
+
+#library #book-list article div.book-settings button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.visible {
+  height: 180px;
+  border-bottom: 2px solid black;
+}
