@@ -1,10 +1,10 @@
 <template>
   <div>
-    <button id="new-book">NEW BOOK</button>
-    <form class="book-form">
+    <button id="new-book" v-on:click="isVisible = !isVisible">NEW BOOK</button>
+    <form class="book-form" :class="{visible: isVisible}" v-on:submit.prevent="onSubmit">
       <div>
         <label for="title">Title</label>
-        <input id="title" type="text" name="title" maxlength="50" required>
+        <input id="title" type="text" v-model="title" name="title" maxlength="50" required>
       </div>
       <div>
         <label for="author">Author</label>

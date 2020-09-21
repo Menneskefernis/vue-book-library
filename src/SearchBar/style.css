@@ -44,3 +44,8 @@
   /*margin: 20px 0;*/
   margin-top: 20px;
 }
+
+.visible {
+  height: 180px;
+  border-bottom: 2px solid black;
+}

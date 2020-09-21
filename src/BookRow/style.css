@@ -32,8 +32,3 @@ i {
   display: block;
   margin-bottom: 10px;
 }
-
-.visible {
-  height: 180px;
-  border-bottom: 2px solid black;
-}
