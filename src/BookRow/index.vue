@@ -8,7 +8,7 @@
         <p>Read: <i>{{bookData.isRead}}</i></p>
       </div>
       <div class="book-settings">
-        <button id="remove-btn">Remove</button>
+        <button id="remove-btn" v-on:click="$emit('remove')">Remove</button>
         <div>
           <label for="read">Read?</label>
           <input id="read" type="checkbox" name="read">

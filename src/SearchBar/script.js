@@ -5,6 +5,7 @@ export default {
   data() {
     return {
       bookData: {
+        id: null,
         title: "",
         author: "",
         pages: 50,
@@ -16,7 +17,16 @@ export default {
   },
   methods: {    
     onSubmit(event) {
-      bus.$emit('book-data', this.bookData)
+      if (this.bookData.title !== "" && this.bookData.author !== "") {
+        bus.$emit('new-book', this.bookData)
+      }
+
+      this.bookData = {
+        title: "",
+        author: "",
+        pages: 50,
+        isRead: false,
+      }
     }
   },
 }
