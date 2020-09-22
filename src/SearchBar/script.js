@@ -1,17 +1,22 @@
+import bus from '../bus'
+
 export default {
   name: 'SearchBar',
   data() {
     return {
-      title: "",
-      author: "",
-      pages: 50,
-      isRead: false,
+      bookData: {
+        title: "",
+        author: "",
+        pages: 50,
+        isRead: false,
+      },
+
       isVisible: false,
     }
   },
   methods: {    
     onSubmit(event) {
-      console.log(title)
+      bus.$emit('book-data', this.bookData)
     }
   },
 }

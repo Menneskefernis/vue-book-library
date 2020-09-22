@@ -2,10 +2,10 @@
   <div>
     <article>
       <div class="book-info">
-        <h2>Harry Potter</h2>
-        <p>Author: <i>J.K. Rowling</i></p>
-        <p>Pages: <i>425</i></p>
-        <p>Read: <i>False</i></p>
+        <h2>{{bookData.title}}</h2>
+        <p>Author: <i>{{bookData.author}}</i></p>
+        <p>Pages: <i>{{bookData.pages}}</i></p>
+        <p>Read: <i>{{bookData.isRead}}</i></p>
       </div>
       <div class="book-settings">
         <button id="remove-btn">Remove</button>
