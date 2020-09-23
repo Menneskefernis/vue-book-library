@@ -15,7 +15,7 @@ export default {
   methods: {
     onBookSubmission(bookData) {
       bookData.id = this.nextBookId++
-      this.books.unshift(bookData)
+      this.books.push(bookData)
       this.sort()
       this.saveToLocalStorage()
     },
@@ -45,7 +45,7 @@ export default {
   created() {
     bus.$on('new-book', this.onBookSubmission)
     this.books = JSON.parse(localStorage.getItem('Books'))
-    this.nextBookId = this.findMaxID() + 1
+    if (this.books) this.nextBookId = this.findMaxID() + 1
   },
   destroyed() {
     bus.$off('new-book', this.onBookSubmission)
