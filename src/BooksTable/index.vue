@@ -7,7 +7,8 @@
           v-for="(book, index) in books"
           :bookData="book"
           :key="book.id"
-          v-on:remove="removeBook(index)">
+          v-on:remove="removeBook(index)"
+          v-on:toggleReadStatus="handleReadToggle(index, $event)">
         </book-row>
       </section>
     </section>

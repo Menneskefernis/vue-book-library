@@ -10,8 +10,8 @@
       </div>
       <div class="book-settings">
         <button id="remove-btn" v-on:click="$emit('remove')">Remove</button>
-        <button id="read" v-if="isRead" v-on:click="isRead = !isRead" name="read">Have not read</button>
-        <button id="read" v-else v-on:click="isRead = !isRead" name="read">Book read!</button>
+        <button id="read" v-if="isRead" v-on:click="toggleRead()" name="read">Have not read</button>
+        <button id="read" v-else v-on:click="toggleRead()" name="read">Book read!</button>
       </div>
     </article>
   </div>

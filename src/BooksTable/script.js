@@ -23,6 +23,11 @@ export default {
       this.books.splice(index, 1)
       this.saveToLocalStorage()
     },
+    handleReadToggle(index, toggleValue) {
+      const book = this.books[index]
+      book.isRead = toggleValue
+      this.saveToLocalStorage()
+    },
     sort() {
       this.books.sort((a, b) => {
         if (a.title > b.title) {
@@ -44,8 +49,11 @@ export default {
   },
   created() {
     bus.$on('new-book', this.onBookSubmission)
-    this.books = JSON.parse(localStorage.getItem('Books'))
-    if (this.books) this.nextBookId = this.findMaxID() + 1
+    const books = JSON.parse(localStorage.getItem('Books'))
+    if (books) {
+      this.books = books
+      this.nextBookId = this.findMaxID() + 1
+    }
   },
   destroyed() {
     bus.$off('new-book', this.onBookSubmission)
