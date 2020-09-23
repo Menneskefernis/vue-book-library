@@ -2,8 +2,8 @@
   border-bottom: 0px solid rgba(0, 0, 0, 0);
   display: block;
   overflow: hidden;
-  -webkit-transition: all 0.7s;
-  transition: all 0.7s;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s ease-in;
   height: 0;
 }
 
@@ -17,8 +17,10 @@
   margin-top: 2px;
 }
 
-.book-form > div input:not(#read):invalid:required {
+.book-form > div input:not(#read):invalid {
   border: 1px solid red;
+  -webkit-box-shadow: 0 0 3px red;
+          box-shadow: 0 0 3px red;
 }
 
 .book-form div:last-of-type {
@@ -39,13 +41,13 @@
           box-shadow: 1px 1px 2px #70a570;
 }
 
+
 #new-book {
   display: block;
-  /*margin: 20px 0;*/
   margin-top: 20px;
 }
 
 .visible {
-  height: 180px;
+  height: 160px;
   border-bottom: 2px solid black;
 }

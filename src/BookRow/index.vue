@@ -5,14 +5,13 @@
         <h2>{{bookData.title}}</h2>
         <p>Author: <i>{{bookData.author}}</i></p>
         <p>Pages: <i>{{bookData.pages}}</i></p>
-        <p>Read: <i>{{bookData.isRead}}</i></p>
+        <p v-if="isRead">Read: <i>Yes</i></p>
+        <p v-else>Read: <i>No</i></p>
       </div>
       <div class="book-settings">
         <button id="remove-btn" v-on:click="$emit('remove')">Remove</button>
-        <div>
-          <label for="read">Read?</label>
-          <input id="read" type="checkbox" name="read">
-        </div>
+        <button id="read" v-if="isRead" v-on:click="isRead = !isRead" name="read">Have not read</button>
+        <button id="read" v-else v-on:click="isRead = !isRead" name="read">Book read!</button>
       </div>
     </article>
   </div>

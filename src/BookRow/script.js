@@ -1,7 +1,9 @@
 export default {
   name: 'BookRow',
   data() {
-    return {}
+    return {
+      isRead: this.bookData.isRead,
+    }
   },
   props: ['bookData'],
 }

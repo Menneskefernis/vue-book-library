@@ -26,9 +26,11 @@ i {
 
 #library #book-list article div.book-settings {
   float: right;
+  width: 100px;
+  text-align: right;
 }
 
 #library #book-list article div.book-settings button {
-  display: block;
+  display: inline-block;
   margin-bottom: 10px;
 }

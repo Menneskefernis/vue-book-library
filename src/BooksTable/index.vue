@@ -7,7 +7,7 @@
           v-for="(book, index) in books"
           :bookData="book"
           :key="book.id"
-          v-on:remove="books.splice(index, 1)">
+          v-on:remove="removeBook(index)">
         </book-row>
       </section>
     </section>

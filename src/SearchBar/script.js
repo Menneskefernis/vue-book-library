@@ -11,7 +11,6 @@ export default {
         pages: 50,
         isRead: false,
       },
-
       isVisible: false,
     }
   },
@@ -20,7 +19,9 @@ export default {
       if (this.bookData.title !== "" && this.bookData.author !== "") {
         bus.$emit('new-book', this.bookData)
       }
-
+      this.resetForm()
+    },
+    resetForm() {
       this.bookData = {
         title: "",
         author: "",
